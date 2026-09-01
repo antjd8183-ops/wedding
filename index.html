@@ -201,17 +201,38 @@ section {
 
   </section>
 
-  <section>
+  <section class="account">
 
-    <div class="title">마음 전하실 곳</div>
+  <div class="title">마음 전하실 곳</div>
 
-    <div class="info">
-    이종필 카카오뱅크 3333022048500
-    최애란 새마을금고 9002137334001
+  <div class="account-box">
 
+    <div class="account-person">
+      <strong>신랑 이종필</strong><br>
+      카카오뱅크 3333-02-2048500
+      <button onclick="copyAccount('3333022048500')">
+        계좌번호 복사
+      </button>
     </div>
 
-  </section>
+    <div class="account-person">
+      <strong>신부 최애란</strong><br>
+      새마을금고 9002-13-7334001
+      <button onclick="copyAccount('9002137334001')">
+        계좌번호 복사
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+function copyAccount(account) {
+  navigator.clipboard.writeText(account);
+  alert("계좌번호가 복사되었습니다.");
+}
+</script>
 
   <div class="footer">
     이종필 · 최애란<br><br>
